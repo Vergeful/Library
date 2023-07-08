@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top">
+        <div>Library</div>
+        <div class="create-delete">
+            <button class="create">Add New Book</button>
+            <button class="delete">Delete All Books</button>
+        </div>
+    </div>
+    <div class="body">
+
+    </div>
+
+    <!-- Modal has intial display as none -->
+    <div class="bg-modal">
+        <div class="modal-content">
+            <form id="modal-form">
+                <div class="form-div">
+                    <div>
+                        <label for="title">Title*</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+    
+                    <div>
+                        <label for="author">Author*</label>
+                        <input type="text" id="author" name="author" required>
+                    </div>
+    
+                    <div>
+                        <label for="pages">Pages*</label>
+                        <input type="number" id="pages" name="pages" required>
+                    </div>
+    
+                    <div>
+                        <span>Have you read this book?*</span>
+                        <select name="readStatus" id="readStatus">
+                            <option value="read" selected>I have read this book!</option>
+                            <option value="not-read">I have not read this book!</option>
+                        </select>
+                    </div>
+    
+                    <div>
+                        <button type="submit" class="top-add">Add Book</button>
+                        <button class="top-cancel" type="button">cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

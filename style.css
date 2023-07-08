@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+}
+
+body{
+    background-color: rgb(60, 211, 211);
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    height: 100vh;
+}
+
+.top{
+    border-bottom: 3px solid black;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding-bottom: 5px;
+}
+
+.top>:nth-child(1){
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+.create-delete{
+    display: flex;
+    gap: 40px;
+}
+
+.create,
+.delete{
+    height: 60px;
+    width: 140px;
+    background-color: rgb(253, 199, 208);
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.create:hover,
+.delete:hover{
+    position: relative;
+    top: -5px;
+}
+
+
+.body{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 25px;
+    grid-gap: 5px;
+}
+
+.card{
+    height: 300px;
+    width: 225px;
+    background-color: rgb(253, 199, 208);
+    border-radius: 5px;
+    border: 3px solid black;
+
+    display: grid;
+    justify-items: center;
+    padding: 5px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    position: relative;
+    box-shadow: 0 8px 8px -4px grey;
+}
+
+.close-card{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    transform: rotate(45deg);
+    border: none;
+    background-color: rgb(253, 199, 208);
+    font-size: 25px;
+   
+}
+
+.close-card:hover{
+    color: white;
+}
+
+.read{
+    background-color: rgb(12, 137, 12);
+    color: white;
+    display: block;
+}
+
+.not-read{
+    background-color: red;
+    color: white;
+    display: block;
+}
+
+.read,
+.not-read{
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.bg-modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal-content{
+    width: 500px;
+    height: 400px;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 20px;
+    display: grid;
+    background-color:blanchedalmond;
+}
+
+.form-div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.form-div>div:nth-last-child(1){
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.top-add,
+.top-cancel{
+    height: 40px;
+    width: 90px;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+@media only screen and (max-width:600px){
+    .body{
+        justify-items: center;
+    }
+}
+
+@media only screen and (max-height: 700px){
+    .create,
+    .delete{
+        height: 40px;
+        width: 90px;
+    }
+
+    .top>:nth-child(1){
+        font-size: 2rem;
+    }
+}
